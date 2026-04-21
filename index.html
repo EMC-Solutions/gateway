@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EMC Solutions</title>
+</head>
+<body>
+   <script>
+        const links = {
+            "monthly-overview": "https://monthly-overview-gamma.vercel.app",
+            "default":"https://emcsolutions.website/"
+        };
+        const params = new URLSearchParams(window.location.search);
+        const key = params.get('path');
+        const target = links[key] || links["default"];
+        window.location.replace(target);
+    </script>
+</body>
+</html>
